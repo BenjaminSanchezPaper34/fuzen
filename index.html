@@ -12,7 +12,6 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fuzen.fr/">
 
-<!-- Open Graph -->
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Fuzen">
@@ -29,13 +28,11 @@
 <meta property="restaurant:contact_info:country_name" content="France">
 <meta property="restaurant:contact_info:phone_number" content="+33682201613">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fuzen — Restaurant asiatique Marseille 13013">
 <meta name="twitter:description" content="Sushi, wok, pad thaï, bo bun à Marseille 13013. Sur place, à emporter, livraison.">
 <meta name="twitter:image" content="https://fuzen.fr/assets/images/logo-fuzen.png">
 
-<!-- Geo -->
 <meta name="geo.region" content="FR-13">
 <meta name="geo.placename" content="Marseille">
 <meta name="geo.position" content="43.3379;5.4148">
@@ -46,7 +43,6 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="alternate" href="https://fuzen.fr/" hreflang="fr-FR">
 
-<!-- JSON-LD Restaurant -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,77 +90,53 @@
 </head>
 <body>
 
-<nav class="nav" aria-label="Navigation principale">
-  <a href="/" aria-label="Accueil Fuzen">
-    <img src="assets/images/logo-fuzen.png" alt="Fuzen" class="nav-logo" width="114" height="64">
-  </a>
-  <div class="nav-links">
-    <a href="#infos" class="hide-mobile">Infos</a>
-    <a href="tel:+33682201613" class="hide-mobile">06 82 20 16 13</a>
-    <a href="carte.html" class="nav-cta">La carte</a>
-  </div>
-</nav>
+<main class="home">
+  <img src="assets/images/bambo-fuzen.png" alt="" class="deco deco-bamboo" aria-hidden="true">
+  <img src="assets/images/suspension-fuzen-crop-u180.png" alt="" class="deco deco-suspension" aria-hidden="true">
+  <img src="assets/images/cornerg-fuzen-crop-u150.png" alt="" class="deco deco-leaf-left" aria-hidden="true">
+  <img src="assets/images/cornerd-fuzen-crop-u104.png" alt="" class="deco deco-leaf-right" aria-hidden="true">
 
-<header class="hero">
-  <img src="assets/images/bambo-fuzen.png" alt="" class="hero-bamboo-left" aria-hidden="true" loading="eager">
-  <img src="assets/images/suspension-fuzen-crop-u180.png" alt="" class="hero-bamboo-right" aria-hidden="true" loading="lazy">
+  <div class="home-inner">
+    <h1 style="font-size:0;position:absolute;left:-9999px">Fuzen — Restaurant asiatique Marseille 13013</h1>
+    <img src="assets/images/logo-fuzen.png" alt="Fuzen — Restaurant asiatique à Marseille" class="home-logo" width="400" height="225">
 
-  <img src="assets/images/logo-fuzen.png" alt="Fuzen — Restaurant asiatique à Marseille" class="hero-logo" width="400" height="225">
-  <p class="hero-tagline">Sur place<span>|</span>À emporter<span>|</span>En livraison</p>
-  <a href="carte.html" class="hero-cta">Consulter la carte</a>
-  <p class="hero-sub">
-    <strong>Restaurant asiatique à Marseille 13013.</strong><br>
-    Sushi, makis, wok, pad thaï, bo bun, gyoza — cuisine japonaise, vietnamienne et thaïlandaise.
-  </p>
-</header>
+    <a href="carte.html" class="home-cta">Consulter la carte</a>
 
-<section class="infos" id="infos">
-  <div class="container">
-    <div class="infos-grid">
-      <div class="info-card reveal">
-        <h3>Horaires</h3>
-        <p>Fermé le mercredi</p>
-        <p class="dim">11h00 – 14h00</p>
-        <p class="dim">18h00 – 22h00</p>
-      </div>
-      <div class="info-card reveal">
-        <h3>Adresse</h3>
-        <p><a href="https://maps.apple.com/?q=19%20Avenue%20Fr%C3%A9d%C3%A9ric%20Mistral%2013013%20Marseille" rel="noopener">19 Avenue Frédéric Mistral</a></p>
-        <p><a href="https://maps.apple.com/?q=19%20Avenue%20Fr%C3%A9d%C3%A9ric%20Mistral%2013013%20Marseille" rel="noopener">13013 Marseille</a></p>
-      </div>
-      <div class="info-card reveal">
-        <h3>Téléphone</h3>
-        <p><a href="tel:+33682201613">06 82 20 16 13</a></p>
-        <p><a href="tel:+33422915010">04 22 91 50 10</a></p>
-      </div>
-      <div class="info-card reveal">
-        <h3>Livraison</h3>
-        <p>À partir de 20€</p>
-        <p class="dim">11e, 12e, 13e arr., La Valentine, Château-Gombert, Plan de Cuques, Allauch</p>
-      </div>
+    <p class="home-tagline">Sur place<span class="sep">|</span>À emporter<span class="sep">|</span>En livraison</p>
+
+    <div class="home-hours">
+      <p><span class="accent">Fermé le mercredi</span></p>
+      <p class="muted">11h00 – 14h00 &nbsp;&amp;&nbsp; 18h00 – 22h00</p>
+      <p class="muted">Livraison à partir de 20€ — 11e, 12e &amp; 13e arr. de Marseille,<br>La Valentine, Château-Gombert, Plan de Cuques, Allauch</p>
     </div>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="socials">
-      <a href="https://www.facebook.com/profile.php?id=61557464920629" aria-label="Facebook Fuzen" target="_blank" rel="noopener"><img src="assets/images/facebook-fuzen.svg" alt="" width="20" height="20"></a>
-      <a href="https://www.instagram.com/fuzenrestaurant/" aria-label="Instagram Fuzen" target="_blank" rel="noopener"><img src="assets/images/instagram-fuzen.svg" alt="" width="20" height="20"></a>
-      <a href="https://www.tripadvisor.fr/Restaurant_Review-g187253-d27902609-Reviews-Restaurant_Fuzen-Marseille_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html" aria-label="Tripadvisor Fuzen" target="_blank" rel="noopener"><img src="assets/images/tripadvisor-fuzen.svg" alt="" width="20" height="20"></a>
+    <div class="home-phones">
+      <a href="tel:+33682201613">06 82 20 16 13</a>
+      <a href="tel:+33422915010">04 22 91 50 10</a>
     </div>
-    <div class="footer-meta">
-      <p>Fuzen &copy; <span id="year"></span> — Tous droits réservés</p>
-      <p>19 Avenue Frédéric Mistral, 13013 Marseille</p>
-      <a class="footer-credit" href="https://paper34.fr" target="_blank" rel="noopener">
-        <span>Réalisé par</span>
-        <img src="assets/images/logoblanc-paper34.svg" alt="Paper34">
+
+    <div class="home-address">
+      <a href="https://maps.apple.com/?q=19%20Avenue%20Fr%C3%A9d%C3%A9ric%20Mistral%2013013%20Marseille" rel="noopener">
+        19 Avenue Frédéric Mistral — 13013 Marseille
       </a>
     </div>
+
+    <div class="home-socials">
+      <a href="https://www.facebook.com/profile.php?id=61557464920629" aria-label="Facebook Fuzen" target="_blank" rel="noopener"><img src="assets/images/facebook-fuzen.svg" alt=""></a>
+      <a href="https://www.instagram.com/fuzenrestaurant/" aria-label="Instagram Fuzen" target="_blank" rel="noopener"><img src="assets/images/instagram-fuzen.svg" alt=""></a>
+      <a href="https://www.tripadvisor.fr/Restaurant_Review-g187253-d27902609-Reviews-Restaurant_Fuzen-Marseille_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html" aria-label="Tripadvisor Fuzen" target="_blank" rel="noopener"><img src="assets/images/tripadvisor-fuzen.svg" alt=""></a>
+    </div>
   </div>
-</footer>
+
+  <div class="home-footer">
+    <span>Fuzen &copy; <span id="year"></span> Tous droits réservés</span>
+    <a href="https://paper34.fr" target="_blank" rel="noopener">
+      <span>Réalisé par</span>
+      <img src="assets/images/logoblanc-paper34.svg" alt="Paper34">
+    </a>
+  </div>
+</main>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="assets/js/main.js" defer></script>
 </body>
 </html>
