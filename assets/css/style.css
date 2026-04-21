@@ -160,6 +160,8 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-logo { height: 36px; width: auto; aspect-ratio: 400 / 179; }
 .nav-links { display: flex; gap: 1.2rem; align-items: center; font-size: 0.9rem; font-weight: 500; }
+.nav-phone-icon { display: none; }
+@media (max-width: 768px) { .nav-phone-icon { display: inline-block; } }
 .nav-links a { opacity: 0.85; transition: opacity 0.2s, color 0.2s; }
 .nav-links a:hover { color: var(--accent); opacity: 1; }
 .nav-cta {
