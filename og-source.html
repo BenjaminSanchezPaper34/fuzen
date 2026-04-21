@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+@font-face { font-family:'Outfit'; src:url('assets/fonts/outfit-bold-webfont.woff') format('woff'); font-weight:700; }
+@font-face { font-family:'Outfit'; src:url('assets/fonts/outfit-medium-webfont.woff') format('woff'); font-weight:500; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1200px; height:630px; overflow:hidden; }
+body {
+  background: radial-gradient(ellipse at 30% 40%, #0f1f0a 0%, #000000 70%);
+  color:#fff; font-family:'Outfit', sans-serif;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.deco-bamboo { position:absolute; top:0; right:0; height:100%; opacity:0.8; }
+.deco-corner-tl { position:absolute; top:0; left:0; width:420px; opacity:0.95; }
+.deco-corner-br { position:absolute; bottom:0; right:0; width:420px; opacity:0.95; }
+.deco-lamp { position:absolute; top:0; left:0; width:180px; margin-top:120px; opacity:0.95; }
+.center { text-align:center; position:relative; z-index:10; }
+.logo { width:500px; margin:0 auto 36px; display:block; }
+.tagline { font-weight:500; font-size:22px; letter-spacing:7px; text-transform:uppercase; color:#fff; }
+.tagline .sep { color:#53C22C; margin:0 14px; }
+.sub {
+  margin-top:28px; font-weight:500; font-size:18px; letter-spacing:3px; color:rgba(255,255,255,0.65);
+  text-transform:uppercase;
+}
+.sub .accent { color:#53C22C; }
+</style>
+</head>
+<body>
+<img src="assets/images/suspension-fuzen-crop-u180.png" class="deco-lamp">
+<img src="assets/images/bambo-fuzen.png" class="deco-bamboo">
+<img src="assets/images/cornerg-fuzen-crop-u150.png" class="deco-corner-tl">
+<img src="assets/images/cornerd-fuzen-crop-u104.png" class="deco-corner-br">
+<div class="center">
+  <img src="assets/images/logo-fuzen.png" class="logo">
+  <div class="tagline">Sur place<span class="sep">|</span>À emporter<span class="sep">|</span>En livraison</div>
+  <div class="sub">Restaurant asiatique <span class="accent">·</span> Marseille 13013</div>
+</div>
+</body>
+</html>

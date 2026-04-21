@@ -120,7 +120,17 @@ a { color: inherit; text-decoration: none; }
 }
 .home-address a:hover { color: var(--accent); }
 
-.home-socials { margin-top: 2rem; display: flex; justify-content: center; gap: 1.6rem; }
+.home-review {
+  margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-dim); border: 1px solid var(--border);
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.home-review:hover { color: #000; background: var(--accent); border-color: var(--accent); }
+.home-review svg { flex-shrink: 0; }
+
+.home-socials { margin-top: 1.6rem; display: flex; justify-content: center; gap: 1.6rem; }
 .home-socials a {
   width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
   opacity: 0.8; transition: opacity 0.2s, transform 0.2s;
