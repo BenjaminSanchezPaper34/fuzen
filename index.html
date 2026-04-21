@@ -40,6 +40,10 @@
 
 <link rel="icon" href="assets/images/favicon.ico">
 <link rel="apple-touch-icon" href="assets/images/logo-fuzen.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" href="assets/images/logo-fuzen.png" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff" href="assets/fonts/outfit-regular-webfont.woff" crossorigin>
+<link rel="preload" as="font" type="font/woff" href="assets/fonts/outfit-bold-webfont.woff" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="alternate" href="https://fuzen.fr/" hreflang="fr-FR">
 
@@ -87,6 +91,45 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Où se trouve le restaurant Fuzen à Marseille ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le restaurant Fuzen est situé au 19 Avenue Frédéric Mistral, 13013 Marseille." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les horaires d'ouverture du restaurant Fuzen ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fuzen est ouvert tous les jours sauf le mercredi, de 11h00 à 14h00 puis de 18h00 à 22h00." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les zones de livraison du restaurant Fuzen ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fuzen livre dans les 11e, 12e et 13e arrondissements de Marseille, ainsi qu'à La Valentine, Château-Gombert, Plan de Cuques et Allauch, à partir de 20€ de commande." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel type de cuisine propose Fuzen ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fuzen propose une cuisine asiatique : sushi, makis, california rolls, spring rolls, chirashi, sashimi, wok, pad thaï, bo bun, gyoza, nems, et des spécialités japonaises, vietnamiennes et thaïlandaises." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on commander à emporter chez Fuzen ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, Fuzen propose la vente sur place, à emporter et en livraison. Commandes au 06 82 20 16 13 ou au 04 22 91 50 10." }
+    },
+    {
+      "@type": "Question",
+      "name": "Y a-t-il un menu du midi chez Fuzen ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, le Menu Fuzen à 18,50€ (entrée + wok + dessert) est servi uniquement le midi en semaine, hors jours fériés. Le Menu Zen à 17,50€ est également disponible." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -98,7 +141,7 @@
 
   <div class="home-inner">
     <h1 style="font-size:0;position:absolute;left:-9999px">Fuzen — Restaurant asiatique Marseille 13013</h1>
-    <img src="assets/images/logo-fuzen.png" alt="Fuzen — Restaurant asiatique à Marseille" class="home-logo" width="400" height="225">
+    <img src="assets/images/logo-fuzen.png" alt="Fuzen — Restaurant asiatique à Marseille" class="home-logo" width="400" height="225" fetchpriority="high">
 
     <a href="carte.html" class="home-cta">Consulter la carte</a>
 
