@@ -285,3 +285,62 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* ============ ENTRÉE / TRANSITIONS ============ */
+
+/* View Transitions API (Chrome 111+, Safari 18+) — transition douce entre pages */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+::view-transition-old(root) { animation-name: vt-fade-out; }
+::view-transition-new(root) { animation-name: vt-fade-in; }
+@keyframes vt-fade-out { to { opacity: 0; } }
+@keyframes vt-fade-in  { from { opacity: 0; } }
+
+/* Décors : fade doux à l'arrivée */
+.deco {
+  opacity: 0;
+  animation: deco-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.deco-corner-tl { animation-delay: 0.05s; }
+.deco-corner-br { animation-delay: 0.15s; }
+.deco-suspension { animation-delay: 0.45s; animation-name: deco-lamp-in; }
+.deco-bamboo    { animation-delay: 0.35s; animation-name: deco-bamboo-in; }
+@keyframes deco-in       { from { opacity: 0; } to { opacity: 0.95; } }
+@keyframes deco-lamp-in  { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes deco-bamboo-in{ from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Home : contenu en stagger */
+.home-inner > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.home-inner > .home-logo   { animation-delay: 0.15s; }
+.home-inner > .home-cta    { animation-delay: 0.35s; }
+.home-inner > .home-tagline{ animation-delay: 0.48s; }
+.home-inner > .home-hours  { animation-delay: 0.58s; }
+.home-inner > .home-phones { animation-delay: 0.68s; }
+.home-inner > .home-address{ animation-delay: 0.76s; }
+.home-inner > .home-review { animation-delay: 0.84s; }
+.home-inner > .home-socials{ animation-delay: 0.92s; }
+.home-inner > h1           { animation: none; } /* titre SR-only */
+.home-footer { opacity: 0; animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.05s forwards; }
+@keyframes rise-in { to { opacity: 1; transform: translateY(0); } }
+
+/* Carte : hero & tabs à l'arrivée */
+.menu-hero > * {
+  opacity: 0; transform: translateY(14px);
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.menu-hero > h1 { animation-delay: 0.1s; }
+.menu-hero > p  { animation-delay: 0.2s; }
+.menu-hero > .menu-download { animation-delay: 0.3s; }
+.menu-tabs { opacity: 0; animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards; }
+
+/* Scroll reveal (activé via JS) */
+.sr { opacity: 0; transform: translateY(18px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.sr.in { opacity: 1; transform: translateY(0); }
