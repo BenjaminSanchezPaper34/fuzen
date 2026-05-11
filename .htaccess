@@ -12,8 +12,19 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# Redirection 301 de l'ancien PDF vers la page carte HTML
+# -------- Redirections 301 anciennes URLs Muse --------
 Redirect 301 /assets/depliant-web-fuzen.pdf /carte
+Redirect 301 /depliant-web-fuzen.pdf /carte
+Redirect 301 /assets/pdf/carte-fuzen.pdf /carte
+Redirect 301 /phone/index.html /
+Redirect 301 /phone/ /
+Redirect 301 /phone /
+Redirect 301 /index.html /
+Redirect 301 /muse_manifest.xml /
+
+# Anciennes ressources Muse (CSS/JS/images obsolètes) → accueil
+RedirectMatch 301 ^/css/(.*)$ /
+RedirectMatch 301 ^/scripts/(.*)$ /
 
 # -------- Compression --------
 <IfModule mod_deflate.c>
