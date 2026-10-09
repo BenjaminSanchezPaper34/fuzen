@@ -38,3 +38,20 @@ if (!document.startViewTransition) {
     });
   });
 }
+
+// ============ ÉVÉNEMENTS ANALYTICS (Vercel Web Analytics) ============
+// Un clic sur un lien sortant clé = un événement nommé, lu dans le tableau de bord Vercel.
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href]');
+  if (!a || typeof window.va !== 'function') return;
+  const href = a.getAttribute('href');
+  let name = null;
+  if (href.startsWith('tel:')) name = 'tel';
+  else if (href.includes('maps.apple.com') || href.includes('google.com/maps')) name = 'itineraire';
+  else if (href.includes('instagram.com')) name = 'instagram';
+  else if (href.includes('facebook.com')) name = 'facebook';
+  else if (href.includes('tripadvisor')) name = 'tripadvisor';
+  else if (href.includes('share.google') || href.includes('writereview')) name = 'avis-google';
+  else if (href === '/carte') name = 'carte';
+  if (name) window.va('event', { name, data: { page: location.pathname, cible: href.replace(/^tel:/, '') } });
+});
